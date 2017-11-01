@@ -26,6 +26,12 @@ public class Title : MonoBehaviour {
             Player1();
             Debug.Log("LRきたよ");
         }
+
+        if (Input.GetAxis("LButton") == 1 && Input.GetAxis("RButton") == 1)
+        {
+            Player1();
+            Debug.Log("LRきたよ");
+        }
     }
 
 	public void Player1()
