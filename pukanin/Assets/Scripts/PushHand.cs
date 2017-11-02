@@ -18,8 +18,11 @@ public class PushHand : MonoBehaviour {
     private float HandHoldCount = 0;
     private float HoldTime = 1.0f;
     public GameObject LeftHand, RightHand,Body;
-	void Start () {
-		
+    public GameObject InstansCollider;
+    
+   
+    void Start () {
+        InstansCollider.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -50,15 +53,17 @@ public class PushHand : MonoBehaviour {
                 HoldTime = 0;
                 RightHand.transform.localPosition = new Vector3(0.5f, Body.transform.localPosition.y, Body.transform.localPosition.z);
                 LeftHand.transform.localPosition = new Vector3(-0.5f, Body.transform.localPosition.y, Body.transform.localPosition.z);
+                InstansCollider.SetActive(false);
                 break;
             case Hand.Attack:
                 HoldTime += 1 * Time.deltaTime;
                 if (HoldTime > HandHoldCount) handState = Hand.Idle;
                 RightHand.transform.localPosition = new Vector3(-0.2f, Body.transform.localPosition.y, Body.transform.localPosition.z+reach);
                 LeftHand.transform.localPosition = new Vector3(+0.2f, Body.transform.localPosition.y, Body.transform.localPosition.z+reach);
-
+                InstansCollider.SetActive(true);
                 break;
             case Hand.IsStunned:
+                InstansCollider.SetActive(false);
                 //腕回転
                 break;
             default:

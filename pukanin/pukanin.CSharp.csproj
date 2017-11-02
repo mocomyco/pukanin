@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\CameraScript\CameraRotation.cs" />
     <Compile Include="Assets\Scripts\CameraScript\SmoothCameraWithBumper.cs" />
     <Compile Include="Assets\Scripts\DamageSeni.cs" />
+    <Compile Include="Assets\Scripts\GameSystem.cs" />
     <Compile Include="Assets\Scripts\GlobalVars\Globals.cs" />
     <Compile Include="Assets\Scripts\GlobalVars\GlobalVarsExample.cs" />
     <Compile Include="Assets\Scripts\GlobalVars\Singleton.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Assets\Scripts\ObjectsScript\Stone.cs" />
     <Compile Include="Assets\Scripts\PlayersScript\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayersScript\PlayerSlope.cs" />
+    <Compile Include="Assets\Scripts\PushAttackCol.cs" />
     <Compile Include="Assets\Scripts\PushHand.cs" />
     <Compile Include="Assets\Scripts\Rlegmove.cs" />
     <Compile Include="Assets\Scripts\rotate.cs" />

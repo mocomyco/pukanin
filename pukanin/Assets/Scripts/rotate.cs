@@ -12,6 +12,8 @@ public class rotate : MonoBehaviour {
     public GameObject bodyIK;
     [SerializeField]
     private Player PState;
+
+    
     void Start()
     {
 

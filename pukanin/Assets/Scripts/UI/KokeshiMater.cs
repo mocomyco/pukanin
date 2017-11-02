@@ -12,7 +12,7 @@ public class KokeshiMater : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        KokeshiSlope = Keisan(_PSlope.CurrentSlope);//プレイヤーの傾きを代入
+        KokeshiSlope = Keisan(_PSlope.currentSlope);//プレイヤーの傾きを代入
         gameObject.transform.rotation = Quaternion.Euler(0, 0, KokeshiSlope); 
 	}
 
