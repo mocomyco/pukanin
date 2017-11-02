@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4398945517358534}
   - component: {fileID: 114046848415678836}
+  - component: {fileID: 65781740648147396}
   m_Layer: 0
   m_Name: kunai
   m_TagString: Untagged
@@ -51,9 +52,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1357954531236836}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.975861, y: 0.025244415, z: -1.1829253}
-  m_LocalScale: {x: 6.561789, y: 6.5617867, z: 6.5617867}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0.12622207, z: -15.762191}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4456400762713264}
   m_Father: {fileID: 0}
@@ -111,6 +112,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1267036037974740}
   m_Mesh: {fileID: 4300000, guid: 50c3bc66607e0464cb736f5a888939bd, type: 3}
+--- !u!65 &65781740648147396
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1357954531236836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95262681206854412
 Animator:
   serializedVersion: 3

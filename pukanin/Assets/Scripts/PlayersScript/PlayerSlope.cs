@@ -69,6 +69,15 @@ public class PlayerSlope : MonoBehaviour {
         return "";
     }
 
+    void OnTriggerEnter( Collider hit )
+    {
+        if(hit.tag == "stone" || hit.tag == "kunai")
+        {
+            currentSlope -= 10;
+        }
+        
+    }
+
     //public bool IsStunned
     //{
     //    get { return isStunned; }
