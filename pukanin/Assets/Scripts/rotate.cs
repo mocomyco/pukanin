@@ -51,12 +51,12 @@ public class rotate : MonoBehaviour {
                 if (Input.GetAxis("Player2LStick tate") < 0 && Input.GetAxis("Player2RStick tate") > 0)
                 {
                     Debug.Log("1");
-                    transform.localEulerAngles += new Vector3(0, 1f, 0);
+                    transform.localEulerAngles += new Vector3(0, 2f, 0);
                 }
 
                 else if (Input.GetAxis("Player2LStick tate") > 0 && Input.GetAxis("Player2RStick tate") < 0)
                 {
-                    transform.localEulerAngles += new Vector3(0, -1f, 0);
+                    transform.localEulerAngles += new Vector3(0, -2f, 0);
                 }
 
                 else

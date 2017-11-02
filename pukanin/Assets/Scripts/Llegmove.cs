@@ -39,9 +39,14 @@ public class Llegmove : MonoBehaviour {
                     //if (rigbody.velocity.x > -1 && (rigbody.velocity.z > -1 || rigbody.velocity.z < 1))
                     {
                         //rigbody.velocity += new Vector3(Input.GetAxis("Lstick yoko") / 3, 0, -Input.GetAxis("Lstick tate") / 3);
-                        rigbody.velocity += (player.transform.right * Input.GetAxis("Lstick yoko")) + (player.transform.forward * -Input.GetAxis("Lstick tate"));
+                        rigbody.velocity = Vector3.Lerp(((player.transform.right * Input.GetAxis("Lstick yoko")) + (player.transform.forward * -Input.GetAxis("Lstick tate"))) * 10
+                            , new Vector3(0, 0, 0), 0.5f);
                     }
 
+                }
+                else
+                {
+                    rigbody.velocity = Vector3.Lerp(rigbody.velocity, new Vector3(0, 0, 0), 0.00001f);
                 }
                 break;
             case Player.Player2:
@@ -60,9 +65,14 @@ public class Llegmove : MonoBehaviour {
                     //if (rigbody.velocity.x > -1 && (rigbody.velocity.z > -1 || rigbody.velocity.z < 1))
                     {
                         //rigbody.velocity += new Vector3(Input.GetAxis("Lstick yoko") / 3, 0, -Input.GetAxis("Lstick tate") / 3);
-                        rigbody.velocity += (player.transform.right * Input.GetAxis("Player2LStick yoko")) + (player.transform.forward * -Input.GetAxis("Player2LStick tate"));
+                        rigbody.velocity = Vector3.Lerp(((player.transform.right * Input.GetAxis("Player2LStick yoko")) + 
+                            (player.transform.forward * -Input.GetAxis("Player2LStick tate"))) * 10, new Vector3(0, 0, 0), 0.5f);
                     }
 
+                }
+                else
+                {
+                    rigbody.velocity = Vector3.Lerp(rigbody.velocity, new Vector3(0, 0, 0), 0.00001f);
                 }
                 break;
             default:
