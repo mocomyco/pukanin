@@ -16,9 +16,9 @@ public class PlayerSlopeUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        text.text = 
-            pSlope.CurrentSlope.ToString() + 
-            "\nCurrent State : " + pSlope.CurrentState() + 
-            "\nPlay Count : " + Globals.Instance.playCount;
+        //text.text = 
+        //    pSlope.CurrentSlope.ToString() + 
+        //    "\nCurrent State : " + pSlope.CurrentState() + 
+        //    "\nPlay Count : " + Globals.Instance.playCount;
 	}
 }

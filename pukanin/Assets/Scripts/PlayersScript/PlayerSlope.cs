@@ -7,8 +7,14 @@ public class PlayerSlope : MonoBehaviour {
     [SerializeField] private float initialSlope;
     [SerializeField] private float recoveryRate;
     [SerializeField] private float stunTime;
-
-    private float currentSlope;
+    public enum Player
+    {
+        Player1,Player2,
+    }
+    [SerializeField]
+    private Player Your;
+    public float currentSlope;
+    private GameSystem GS;
     //private float currentStunTime;
     //private bool isStunned;
     private Dictionary<float, string> playerState = 
@@ -17,12 +23,13 @@ public class PlayerSlope : MonoBehaviour {
     // Use this for initialization
     void Start() {
         currentSlope = initialSlope;
+        GS = GameObject.Find("GameSystem").GetComponent<GameSystem>();
         //currentStunTime = 0;
 
-        playerState.Add(90, "Normal");
-        playerState.Add(60, "Slanted");
-        playerState.Add(30, "Falling");
-        playerState.Add(0, "Down");
+        //playerState.Add(90, "Normal");
+        //playerState.Add(60, "Slanted");
+        //playerState.Add(30, "Falling");
+        //playerState.Add(0, "Down");
     }
 
     // Update is called once per frame
@@ -38,8 +45,11 @@ public class PlayerSlope : MonoBehaviour {
         //    return;
         //}
 
-        if (currentSlope <= 0) currentSlope = 0;
-
+        if (currentSlope <= 0)
+        {
+            GS.SendMessage("Finish", Your);
+            currentSlope = 0;
+        }
         if (currentSlope <= initialSlope)
             currentSlope += Time.deltaTime * recoveryRate;
         else
@@ -53,21 +63,21 @@ public class PlayerSlope : MonoBehaviour {
         //isStunned = true;
     }
 
-    public float CurrentSlope
-    {
-        get { return currentSlope; }
-    }
+    //public float CurrentSlope
+    //{
+    //    get { return currentSlope; }
+    //}
 
-    public string CurrentState()
-    {
-        foreach(var stateDict in playerState)
-        {
-            if (currentSlope >= stateDict.Key)
-                return stateDict.Value;
-        }
+    //public string CurrentState()
+    //{
+    //    foreach(var stateDict in playerState)
+    //    {
+    //        if (currentSlope >= stateDict.Key)
+    //            return stateDict.Value;
+    //    }
 
-        return "";
-    }
+    //    return "";
+    //}
 
     void OnTriggerEnter( Collider hit )
     {

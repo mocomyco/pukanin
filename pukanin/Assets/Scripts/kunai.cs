@@ -21,7 +21,13 @@ public class kunai : MonoBehaviour {
 
     void OnTriggerEnter(Collider hit)
     {
-        if(hit.gameObject.tag == "Player")
+        if(hit.gameObject.tag == "Player1")
+        {
+            hit.gameObject.GetComponent<PlayerSlope>().Damaged(damageValue);
+            Destroy(gameObject);//クナイ消去
+        }
+
+        if (hit.gameObject.tag == "Player2")
         {
             hit.gameObject.GetComponent<PlayerSlope>().Damaged(damageValue);
             Destroy(gameObject);//クナイ消去

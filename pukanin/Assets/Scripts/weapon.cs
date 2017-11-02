@@ -11,15 +11,16 @@ public class weapon : MonoBehaviour {
     }
     [SerializeField]
     private Player player;
+    private GameSystem GS;
     // Use this for initialization
     void Start () {
-		
-	}
+        GS = GameObject.Find("GameSystem").GetComponent<GameSystem>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
-        Act();
+        if(GS.gameState == GameSystem.GameState.ISPLAYING)Act();
      
 	}
 
