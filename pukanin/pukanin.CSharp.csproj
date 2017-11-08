@@ -98,6 +98,8 @@
     <Compile Include="Assets\Scripts\Llegmove.cs" />
     <Compile Include="Assets\Scripts\Lstick.cs" />
     <Compile Include="Assets\Scripts\ObjectsScript\Stone.cs" />
+    <Compile Include="Assets\Scripts\playerColl.cs" />
+    <Compile Include="Assets\Scripts\PlayerDamageRotate.cs" />
     <Compile Include="Assets\Scripts\PlayersScript\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayersScript\PlayerSlope.cs" />
     <Compile Include="Assets\Scripts\PushAttackCol.cs" />

@@ -46,7 +46,7 @@ public class Rlegmove : MonoBehaviour {
 
                 }
 
-                Debug.Log(Input.GetAxis("Rstick yoko"));
+             //   Debug.Log(Input.GetAxis("Rstick yoko"));
                 break;
             case Player.Player2:
                 if (Input.GetAxis("Player2RStick yoko") + 0.2f > 0)

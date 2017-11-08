@@ -23,13 +23,13 @@ public class kunai : MonoBehaviour {
     {
         if(hit.gameObject.tag == "Player1")
         {
-            hit.gameObject.GetComponent<PlayerSlope>().Damaged(damageValue);
+          hit.gameObject.SendMessage("Damaged",damageValue);
             Destroy(gameObject);//クナイ消去
         }
 
         if (hit.gameObject.tag == "Player2")
         {
-            hit.gameObject.GetComponent<PlayerSlope>().Damaged(damageValue);
+            hit.gameObject.SendMessage("Damaged", damageValue);
             Destroy(gameObject);//クナイ消去
         }
 
