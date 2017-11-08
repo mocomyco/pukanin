@@ -39,7 +39,11 @@ GameObject:
   - component: {fileID: 4398945517358534}
   - component: {fileID: 114046848415678836}
   - component: {fileID: 65477762769685854}
+<<<<<<< HEAD
   - component: {fileID: 54525470529837290}
+=======
+  - component: {fileID: 54906053329701196}
+>>>>>>> origin/etou
   m_Layer: 0
   m_Name: kunai
   m_TagString: Damages
@@ -113,7 +117,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1267036037974740}
   m_Mesh: {fileID: 4300000, guid: 50c3bc66607e0464cb736f5a888939bd, type: 3}
+<<<<<<< HEAD
 --- !u!54 &54525470529837290
+=======
+--- !u!54 &54906053329701196
+>>>>>>> origin/etou
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

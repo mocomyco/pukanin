@@ -110,12 +110,14 @@
     <Compile Include="Assets\Scripts\Scene\Fader.cs" />
     <Compile Include="Assets\Scripts\Scene\Initiate.cs" />
     <Compile Include="Assets\Scripts\Scene\SceneTransitionExample.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\StartCountUI.cs" />
     <Compile Include="Assets\Scripts\Title.cs" />
     <Compile Include="Assets\Scripts\UI\KokeshiMater.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerSlopeUI.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
     <Compile Include="Assets\Scripts\weapon.cs" />
+    <Compile Include="Assets\Scripts\Winner.cs" />
     <Compile Include="Assets\Sound\TitleTimeLine.cs" />
     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
     <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />

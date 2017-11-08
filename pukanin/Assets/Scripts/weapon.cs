@@ -31,13 +31,18 @@ public class weapon : MonoBehaviour {
         {
             case Player.Player1:
                 //直進クナイ
+<<<<<<< HEAD
                 if (Input.GetAxis("LButton") == 1 || Input.GetAxis("RButton") == 1)
+=======
+                if (Input.GetButtonDown("LButton"))
+>>>>>>> origin/etou
                 {
                     if (Input.GetAxis("LButton") == 1 && _Switch == false)
                     {
                         Instantiate(buki, transform.position, transform.rotation);
                     }
 
+<<<<<<< HEAD
                     //放物線クナイ
                     if (Input.GetAxis("RButton") == 1 && _Switch == false)
                     {
@@ -46,19 +51,28 @@ public class weapon : MonoBehaviour {
                     _Switch = true;
                 }
                 else
+=======
+                //放物線クナイ
+                if (Input.GetButtonDown("RButton"))
+>>>>>>> origin/etou
                 {
                     _Switch = false;
                 }
                 break;
             case Player.Player2:
                 //直進クナイ
+<<<<<<< HEAD
                 if (Input.GetAxis("Player2LButton") == 1||Input.GetAxis("Player2RButton") == 1)
+=======
+                if (Input.GetButtonDown("Player2LButton"))
+>>>>>>> origin/etou
                 {
                     if (Input.GetAxis("Player2LButton") == 1&&_Switch ==false)
                     {
                         Instantiate(buki, transform.position, transform.rotation);
                     }
 
+<<<<<<< HEAD
                     //放物線クナイ
                     if (Input.GetAxis("Player2RButton") == 1 && _Switch == false)
                     {
@@ -67,6 +81,10 @@ public class weapon : MonoBehaviour {
                     _Switch = true;
                 }
                 else
+=======
+                //放物線クナイ
+                if (Input.GetButtonDown("Player2RButton"))
+>>>>>>> origin/etou
                 {
                     _Switch = false;
                 }

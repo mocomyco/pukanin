@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Player1
   - Player2
+<<<<<<< HEAD
   - Damages
+=======
+  - wall
+>>>>>>> origin/etou
   layers:
   - Default
   - TransparentFX

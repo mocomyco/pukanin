@@ -27,9 +27,9 @@ public class Title : MonoBehaviour {
             Debug.Log("LRきたよ");
         }
 
-        if (Input.GetAxis("LButton") == 1 && Input.GetAxis("RButton") == 1)
+        if (Input.GetAxis("Player2LButton") == 1 && Input.GetAxis("Player2RButton") == 1)
         {
-            Player1();
+            Player2();
             Debug.Log("LRきたよ");
         }
     }

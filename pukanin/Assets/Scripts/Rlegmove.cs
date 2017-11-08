@@ -40,10 +40,16 @@ public class Rlegmove : MonoBehaviour {
                 {
                     //if (rigbody.velocity.x < 1 && (rigbody.velocity.z > -1 || rigbody.velocity.z < 1))
                     {
-                        rigbody.velocity += (player.transform.right * Input.GetAxis("Rstick yoko")) + (player.transform.forward * -Input.GetAxis("Rstick tate"));
+                        rigbody.velocity = Vector3.Lerp(((player.transform.right * Input.GetAxis("Rstick yoko")) + (player.transform.forward * -Input.GetAxis("Rstick tate"))) * 10
+                            , new Vector3(0, 0, 0), 0.5f);
+
                     }
                     //rigbody.velocity += new Vector3(Input.GetAxis("Rstick yoko") / 3, 0, -Input.GetAxis("Rstick tate")/3);
 
+                }
+                else
+                {
+                    rigbody.velocity = Vector3.Lerp(rigbody.velocity, new Vector3(0, 0, 0), 0.00001f);
                 }
 
              //   Debug.Log(Input.GetAxis("Rstick yoko"));
@@ -63,13 +69,19 @@ public class Rlegmove : MonoBehaviour {
                 {
                     //if (rigbody.velocity.x < 1 && (rigbody.velocity.z > -1 || rigbody.velocity.z < 1))
                     {
-                        rigbody.velocity += (player.transform.right * Input.GetAxis("Player2RStick yoko")) + (player.transform.forward * -Input.GetAxis("Player2RStick tate"));
+                        rigbody.velocity = Vector3.Lerp(((player.transform.right * Input.GetAxis("Player2RStick yoko")) + (player.transform.forward * -Input.GetAxis("Player2RStick tate"))) * 10
+                            , new Vector3(0, 0, 0), 0.5f);
+
                     }
                     //rigbody.velocity += new Vector3(Input.GetAxis("Rstick yoko") / 3, 0, -Input.GetAxis("Rstick tate")/3);
 
                 }
+                else
+                {
+                    rigbody.velocity = Vector3.Lerp(rigbody.velocity, new Vector3(0, 0, 0), 0.00001f);
+                }
 
-               // Debug.Log(Input.GetAxis("Rstick yoko"));
+                // Debug.Log(Input.GetAxis("Rstick yoko"));
                 break;
             default:
                 break;
