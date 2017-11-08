@@ -33,5 +33,13 @@ public class kunai : MonoBehaviour {
             Destroy(gameObject);//クナイ消去
         }
 
+        if(hit.gameObject.tag == "wall")
+        {
+            
+            Destroy(gameObject);
+        }
+
+        
+
     }
 }

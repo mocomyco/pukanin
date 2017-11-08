@@ -29,26 +29,26 @@ public class weapon : MonoBehaviour {
         {
             case Player.Player1:
                 //直進クナイ
-                if (Input.GetAxis("LButton") == 1)
+                if (Input.GetButtonDown("LButton"))
                 {
                     Instantiate(buki, transform.position, transform.rotation);
                 }
 
                 //放物線クナイ
-                if (Input.GetAxis("RButton") == 1)
+                if (Input.GetButtonDown("RButton"))
                 {
                     Instantiate(buki2, transform.position, transform.rotation);
                 }
                 break;
             case Player.Player2:
                 //直進クナイ
-                if (Input.GetAxis("Player2LButton") == 1)
+                if (Input.GetButtonDown("Player2LButton"))
                 {
                     Instantiate(buki, transform.position, transform.rotation);
                 }
 
                 //放物線クナイ
-                if (Input.GetAxis("Player2RButton") == 1)
+                if (Input.GetButtonDown("Player2RButton"))
                 {
                     Instantiate(buki2, transform.position, transform.rotation);
                 }

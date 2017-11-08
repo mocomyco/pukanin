@@ -11,6 +11,8 @@ public class GameSystem : MonoBehaviour {
     }
     public string Winner;
     public GameState gameState;
+    static public int WinNum;
+    public SceneTransitionExample S;
 	// Use this for initialization
 	void Start () {
         Winner = "yet";
@@ -28,8 +30,20 @@ public class GameSystem : MonoBehaviour {
 
     void Finish(string Player)
     {
-        if (Player == "Player1") Winner = "Player2";
-        if (Player == "Player2") Winner = "Player1";
+        if (Player == "Player1")
+        {
+            Winner = "Player2";
+            WinNum = 2;
+
+        }
+            
+        if (Player == "Player2")
+        {
+            Winner = "Player1";
+            WinNum = 1;
+        }
+            
         gameState = GameState.FINISH;
+        S.ChangeScene();
     }
 }

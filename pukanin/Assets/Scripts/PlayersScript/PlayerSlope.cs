@@ -13,6 +13,7 @@ public class PlayerSlope : MonoBehaviour {
     }
     [SerializeField]
     private Player Your;
+    private string PlayerNum;
     public float currentSlope;
     private GameSystem GS;
     //private float currentStunTime;
@@ -24,6 +25,7 @@ public class PlayerSlope : MonoBehaviour {
     void Start() {
         currentSlope = initialSlope;
         GS = GameObject.Find("GameSystem").GetComponent<GameSystem>();
+        PlayerNum = "" + Your;
         //currentStunTime = 0;
 
         //playerState.Add(90, "Normal");
@@ -47,8 +49,9 @@ public class PlayerSlope : MonoBehaviour {
 
         if (currentSlope <= 0)
         {
-            GS.SendMessage("Finish", Your);
-            currentSlope = 0;
+            //GS.SendMessage("Finish", PlayerNum);
+            //currentSlope = 0;
+
         }
         if (currentSlope <= initialSlope)
             currentSlope += Time.deltaTime * recoveryRate;
@@ -61,6 +64,16 @@ public class PlayerSlope : MonoBehaviour {
 
         currentSlope -= value;
         //isStunned = true;
+    }
+
+    void OnTriggerEnter( Collider hit )
+    {
+        if (currentSlope <= 0)
+        {
+            GS.SendMessage("Finish", PlayerNum);
+            currentSlope = 0;
+
+        }
     }
 
     //public float CurrentSlope
