@@ -25,16 +25,19 @@ public class DamageSeni : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        verticle = PSlope.slope.z;
+        horizontal = PSlope.slope.x;
         //verticle = (PSlope.SendDamageVec.x);
         //horizontal = (PSlope.SendDamageVec.z);
         //Setting();
         //body.transform.localRotation = Quaternion.Euler(verticle,body.transform.rotation.y,horizontal);
-        //body.transform.localPosition = new Vector3(-horizontal/contract, body.transform.localPosition.y, verticle/contract);
-        body.transform.localRotation = Quaternion.Euler(verticle * 45, body.transform.rotation.y, horizontal * 45);
-        body.transform.localPosition = Vector3.Lerp(Vector3.zero , body.transform.position, 1 * Time.deltaTime);
+        body.transform.localPosition = new Vector3(horizontal*3/PSlope.currentSlope+0.001f, body.transform.localPosition.y,- verticle *3/ PSlope.currentSlope+0.001f);
+        body.transform.localRotation = Quaternion.Euler(verticle * -(PSlope.currentSlope-100)/2, body.transform.rotation.y, horizontal * -(PSlope.currentSlope - 100) / 2);
+        //body.transform.localPosition = Vector3.Lerp(Vector3.zero , body.transform.position, 1 * Time.deltaTime);
         //rightHand.transform.localPosition = new Vector3(0.5f, body.transform.localPosition.y, verticle / contract);
         //leftHand.transform.localPosition = new Vector3(-0.5f, body.transform.localPosition.y, verticle / contract);
-
+        Debug.Log(body.transform.localPosition);
+        //Debug.Log("PSlopeX" + horizontal);
     }
 
     public void Debugddd()

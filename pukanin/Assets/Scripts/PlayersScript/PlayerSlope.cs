@@ -20,14 +20,14 @@ public class PlayerSlope : MonoBehaviour {
     //private bool isStunned;
     private Dictionary<float, string> playerState = 
         new Dictionary<float, string>();
-
+    public Vector3 slope;
     // Use this for initialization
     void Start() {
         currentSlope = initialSlope;
         GS = GameObject.Find("GameSystem").GetComponent<GameSystem>();
         PlayerNum = "" + Your;
         //currentStunTime = 0;
-
+        slope = Vector3.zero;
         //playerState.Add(90, "Normal");
         //playerState.Add(60, "Slanted");
         //playerState.Add(30, "Falling");
@@ -66,6 +66,13 @@ public class PlayerSlope : MonoBehaviour {
         //isStunned = true;
     }
 
+<<<<<<< HEAD
+    public void Slope(Vector3 vec)
+    {
+        slope = vec;
+        Debug.Log("Slope" + vec);
+    }
+=======
     void OnTriggerEnter( Collider hit )
     {
         if (currentSlope <= 0)
@@ -76,6 +83,7 @@ public class PlayerSlope : MonoBehaviour {
         }
     }
 
+>>>>>>> origin/etou
     //public float CurrentSlope
     //{
     //    get { return currentSlope; }

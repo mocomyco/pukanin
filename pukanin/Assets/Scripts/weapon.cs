@@ -12,9 +12,11 @@ public class weapon : MonoBehaviour {
     [SerializeField]
     private Player player;
     private GameSystem GS;
+    [SerializeField] private bool _Switch;//長押し防止
     // Use this for initialization
     void Start () {
         GS = GameObject.Find("GameSystem").GetComponent<GameSystem>();
+        _Switch = false;
     }
 	
 	// Update is called once per frame
@@ -29,28 +31,62 @@ public class weapon : MonoBehaviour {
         {
             case Player.Player1:
                 //直進クナイ
+<<<<<<< HEAD
+                if (Input.GetAxis("LButton") == 1 || Input.GetAxis("RButton") == 1)
+=======
                 if (Input.GetButtonDown("LButton"))
+>>>>>>> origin/etou
                 {
-                    Instantiate(buki, transform.position, transform.rotation);
-                }
+                    if (Input.GetAxis("LButton") == 1 && _Switch == false)
+                    {
+                        Instantiate(buki, transform.position, transform.rotation);
+                    }
 
+<<<<<<< HEAD
+                    //放物線クナイ
+                    if (Input.GetAxis("RButton") == 1 && _Switch == false)
+                    {
+                        Instantiate(buki2, transform.position, transform.rotation);
+                    }
+                    _Switch = true;
+                }
+                else
+=======
                 //放物線クナイ
                 if (Input.GetButtonDown("RButton"))
+>>>>>>> origin/etou
                 {
-                    Instantiate(buki2, transform.position, transform.rotation);
+                    _Switch = false;
                 }
                 break;
             case Player.Player2:
                 //直進クナイ
+<<<<<<< HEAD
+                if (Input.GetAxis("Player2LButton") == 1||Input.GetAxis("Player2RButton") == 1)
+=======
                 if (Input.GetButtonDown("Player2LButton"))
+>>>>>>> origin/etou
                 {
-                    Instantiate(buki, transform.position, transform.rotation);
-                }
+                    if (Input.GetAxis("Player2LButton") == 1&&_Switch ==false)
+                    {
+                        Instantiate(buki, transform.position, transform.rotation);
+                    }
 
+<<<<<<< HEAD
+                    //放物線クナイ
+                    if (Input.GetAxis("Player2RButton") == 1 && _Switch == false)
+                    {
+                        Instantiate(buki2, transform.position, transform.rotation);
+                    }
+                    _Switch = true;
+                }
+                else
+=======
                 //放物線クナイ
                 if (Input.GetButtonDown("Player2RButton"))
+>>>>>>> origin/etou
                 {
-                    Instantiate(buki2, transform.position, transform.rotation);
+                    _Switch = false;
                 }
                 break;
             default:

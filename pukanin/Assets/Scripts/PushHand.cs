@@ -27,8 +27,8 @@ public class PushHand : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(Input.GetAxis("LButton"));
-        Debug.Log(Input.GetAxis("Player2LButton"));
+       // Debug.Log(Input.GetAxis("LButton"));
+       // Debug.Log(Input.GetAxis("Player2LButton"));
         switch (player)
         {
             case Player.Player1:

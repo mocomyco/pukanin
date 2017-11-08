@@ -52,7 +52,7 @@ public class Rlegmove : MonoBehaviour {
                     rigbody.velocity = Vector3.Lerp(rigbody.velocity, new Vector3(0, 0, 0), 0.00001f);
                 }
 
-                Debug.Log(Input.GetAxis("Rstick yoko"));
+             //   Debug.Log(Input.GetAxis("Rstick yoko"));
                 break;
             case Player.Player2:
                 if (Input.GetAxis("Player2RStick yoko") + 0.2f > 0)

@@ -20,7 +20,7 @@ public class Stone : MonoBehaviour {
 
     void OnTriggerEnter(Collider hit)
     {
-        if (hit.gameObject.tag == "Player")
+        if (hit.gameObject.tag == "Player1"|| hit.gameObject.tag == "Player2")
         {
             Iwa.Play();
             hit.gameObject.GetComponent<PlayerSlope>().Damaged(damageValue);
