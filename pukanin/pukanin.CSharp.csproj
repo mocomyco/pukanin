@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scripts\Title.cs" />
     <Compile Include="Assets\Scripts\UI\KokeshiMater.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerSlopeUI.cs" />
+    <Compile Include="Assets\Scripts\Wall.cs" />
     <Compile Include="Assets\Scripts\weapon.cs" />
     <Compile Include="Assets\Sound\TitleTimeLine.cs" />
     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
